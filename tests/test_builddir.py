@@ -518,8 +518,8 @@ def test_builddir_appstream_svg_screenshot() -> None:
 def test_builddir_eol_runtime() -> None:
     testdir = "tests/builddir/eol_runtime"
     ret = run_checks(testdir)
-    found_warnings = set(ret["warnings"])
-    assert "runtime-is-eol-org.freedesktop.Platform-18.08" in found_warnings
+    found_errors = set(ret["errors"])
+    assert "runtime-is-eol-org.freedesktop.Platform-18.08" in found_errors
 
 
 def test_builddir_wrong_elf_arch() -> None:

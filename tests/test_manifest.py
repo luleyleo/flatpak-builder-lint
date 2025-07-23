@@ -407,8 +407,8 @@ def test_manifest_symlink() -> None:
 
 def test_manifest_eol_runtime() -> None:
     ret = run_checks("tests/manifests/eol_runtime.json")
-    found_warnings = ret["warnings"]
-    assert "runtime-is-eol-org.gnome.Sdk-40" in found_warnings
+    found_errors = ret["errors"]
+    assert "runtime-is-eol-org.gnome.Sdk-40" in found_errors
 
 
 def test_manifest_in_git_repo(tmp_testdir: str) -> None:
